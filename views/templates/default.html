@@ -1,0 +1,7 @@
+{{define content}}
+<h1>User List</h1>
+<ul>
+    {{range .}}
+    <li>{{.Name}} ({{.Email}})</li>
+    {{end}}
+</ul>
