@@ -1,10 +1,16 @@
-module github.com/Gouef/web-project
+module github.com/gouef/web-project
 
 go 1.23.2
 
 require (
-	github.com/Gouef/renderer v0.3.0
-	github.com/Gouef/router v0.1.2
+	github.com/gouef/renderer v0.4.1
+	github.com/gouef/router v0.1.5
+)
+
+replace (
+	github.com/gouef/web-project/app => ./app
+	github.com/gouef/web-project/controllers => ./controllers
+	github.com/gouef/web-project/models => ./models
 )
 
 require (

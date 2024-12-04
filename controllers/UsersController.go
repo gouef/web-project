@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/Gouef/renderer"
-	"github.com/Gouef/web-project/models"
+	"github.com/gouef/renderer"
+	"github.com/gouef/web-project/models"
 	"net/http"
 	"strconv"
 )

@@ -1,11 +1,7 @@
 package main
 
-import (
-	"fmt"
-	"github.com/Gouef/web-project/app"
-)
+import "github.com/gouef/web-project/app"
 
 func main() {
-	fmt.Println("Hello, World!")
 	app.RouterFactory()
 }

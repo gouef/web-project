@@ -1,5 +1,5 @@
-github.com/Gouef/renderer v0.3.0 h1:96zdZ1oTYiuEvuxsM7XN+nIrmyTndiJB39gNK6eV3xU=
-github.com/Gouef/renderer v0.3.0/go.mod h1:j+hfTleXjkuDx9Y7rITNbz2cEmzCJOkd/WG0XWmivVA=
+github.com/Gouef/renderer v0.4.0 h1:Vf+BYwxv1mK0s7TyJUU+oiTXfv1D+akSlon2f8jSYM4=
+github.com/Gouef/renderer v0.4.0/go.mod h1:j+hfTleXjkuDx9Y7rITNbz2cEmzCJOkd/WG0XWmivVA=
 github.com/Gouef/router v0.1.2 h1:VRwZFVh0c4u0ir02uBetLjw8n30hVZvIIJyzaRXNADs=
 github.com/Gouef/router v0.1.2/go.mod h1:UK0lqhXzMn7TXkFsZj72rX8VxqF42EY+Wj4K0RdhIII=
 github.com/bytedance/sonic v1.12.5 h1:hoZxY8uW+mT+OpkcUWw4k0fDINtOcVavEsGfzwzFU/w=
@@ -33,6 +33,8 @@ github.com/goccy/go-json v0.10.3/go.mod h1:oq7eo15ShAhp70Anwd5lgX2pLfOS3QCiwU/PU
 github.com/google/go-cmp v0.5.5 h1:Khx7svrCpmxxtHBq5j2mp/xVjsi8hQMfNLvJFAlrGgU=
 github.com/google/go-cmp v0.5.5/go.mod h1:v8dTdLbMG2kIc/vJvl+f65V22dbkXbowE6jgT/gNBxE=
 github.com/google/gofuzz v1.0.0/go.mod h1:dBl0BpW6vV/+mYPU4Po3pmUjxk6FQPldtuIdl/M65Eg=
+github.com/gouef/renderer v0.4.1/go.mod h1:FEW+OpeTQWUjkjEwYekW4dcwNDCb5fj6N8r9bFdZGkQ=
+github.com/gouef/router v0.1.5/go.mod h1:i08w7XSwqc4ssc4/YihUsCu54yB6/3noR6O/raYZPlk=
 github.com/json-iterator/go v1.1.12 h1:PV8peI4a0ysnczrg+LtxykD8LfKY9ML6u2jnxaEnrnM=
 github.com/json-iterator/go v1.1.12/go.mod h1:e30LSqwooZae/UwlEbR2852Gd8hjQvJoHmT4TnhNGBo=
 github.com/klauspost/cpuid/v2 v2.0.9/go.mod h1:FInQzS24/EEf25PyTYn52gqo7WaD8xa0213Md/qVLRg=
