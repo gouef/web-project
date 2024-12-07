@@ -1,7 +1,14 @@
 package main
 
-import "github.com/gouef/web-project/app"
+import (
+	"github.com/gouef/router"
+	"github.com/gouef/web-project/app"
+)
 
 func main() {
-	app.RouterFactory()
+	r := router.NewRouter()
+	rl := app.RouterFactory()
+
+	r.AddRouteList(rl)
+	r.Run(":8080")
 }

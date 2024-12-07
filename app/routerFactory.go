@@ -1,9 +1,14 @@
 package app
 
-import router2 "github.com/gouef/router"
+import (
+	router "github.com/gouef/router"
+)
 
-func RouterFactory() {
-	router := router2.Router{}
+func RouterFactory() *router.RouteList {
+	app := App{}
+	l := router.NewRouteList()
+	l.Add("/ping", app.Ping, router.Get)
+	l.Add("/", app.Homepage, router.Get)
 
-	router.Run()
+	return l
 }
