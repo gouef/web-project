@@ -5,12 +5,14 @@ go 1.23.4
 require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/gouef/renderer v0.4.1
-	github.com/gouef/router v0.3.0
+	github.com/gouef/router v0.6.1
 )
 
 replace (
 	github.com/gouef/web-project/app => ./app
 	github.com/gouef/web-project/controllers => ./controllers
+	github.com/gouef/web-project/handlers => ./handlers
+	github.com/gouef/web-project/middleware => ./middleware
 	github.com/gouef/web-project/models => ./models
 )
 
@@ -36,10 +38,10 @@ require (
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
 	golang.org/x/arch v0.12.0 // indirect
-	golang.org/x/crypto v0.29.0 // indirect
-	golang.org/x/net v0.31.0 // indirect
+	golang.org/x/crypto v0.30.0 // indirect
+	golang.org/x/net v0.32.0 // indirect
 	golang.org/x/sys v0.28.0 // indirect
-	golang.org/x/text v0.20.0 // indirect
+	golang.org/x/text v0.21.0 // indirect
 	google.golang.org/protobuf v1.35.2 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

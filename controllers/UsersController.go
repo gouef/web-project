@@ -1,13 +1,22 @@
 package controllers
 
 import (
+	"github.com/gin-gonic/gin"
 	"github.com/gouef/renderer"
 	"github.com/gouef/web-project/models"
 	"net/http"
 	"strconv"
 )
 
-func GetAllUsers(w http.ResponseWriter, r *http.Request) {
+type UserController struct {
+}
+
+func (u UserController) Homepage(c *gin.Context) {
+
+	c.String(http.StatusOK, "OK")
+}
+
+func (u UserController) GetAllUsers(w http.ResponseWriter, r *http.Request) {
 	users := models.GetAllUsers()
 	renderer.RenderTemplate(w, "users", users)
 }
