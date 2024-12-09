@@ -4,6 +4,7 @@ import (
 	"github.com/gouef/diago"
 	"github.com/gouef/diago/extensions"
 	"github.com/gouef/router"
+	extensions2 "github.com/gouef/router/extensions"
 	"github.com/gouef/web-project/app"
 	"github.com/gouef/web-project/controllers"
 	"github.com/gouef/web-project/handlers"
@@ -14,7 +15,7 @@ func boot() *router.Router {
 	n := r.GetNativeRouter()
 	d := diago.NewDiago()
 	d.AddExtension(extensions.NewDiagoLatencyExtension())
-	d.AddExtension(extensions.NewDiagoRouteExtension(r))
+	d.AddExtension(extensions2.NewDiagoRouteExtension(r))
 
 	n.Use(diago.DiagoMiddleware(r, d))
 
