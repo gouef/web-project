@@ -6,7 +6,7 @@ require (
 	github.com/gin-gonic/gin v1.10.0
 	github.com/gouef/diago v0.2.0
 	github.com/gouef/renderer v0.4.1
-	github.com/gouef/router v0.7.2
+	github.com/gouef/router v0.8.1
 )
 
 replace (

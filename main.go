@@ -13,11 +13,14 @@ import (
 func boot() *router.Router {
 	r := router.NewRouter()
 	n := r.GetNativeRouter()
-	d := diago.NewDiago()
-	d.AddExtension(extensions.NewDiagoLatencyExtension())
-	d.AddExtension(extensions2.NewDiagoRouteExtension(r))
 
-	n.Use(diago.DiagoMiddleware(r, d))
+	if !r.IsRelease() {
+		d := diago.NewDiago()
+		d.AddExtension(extensions.NewDiagoLatencyExtension())
+		d.AddExtension(extensions2.NewDiagoRouteExtension(r))
+
+		n.Use(diago.DiagoMiddleware(r, d))
+	}
 
 	templateHandler := &handlers.TemplateHandler{Router: r}
 
