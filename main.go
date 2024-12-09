@@ -11,7 +11,11 @@ import (
 func boot() *router.Router {
 	r := router.NewRouter()
 	n := r.GetNativeRouter()
-	n.Use(middleware.TracyMiddleware(r))
+	d := middleware.NewDiago()
+	d.AddExtension(middleware.NewDiagoLatencyExtension())
+	d.AddExtension(middleware.NewDiagoRouteExtension(r))
+
+	n.Use(middleware.DiagoMiddleware(r, d))
 
 	templateHandler := &handlers.TemplateHandler{Router: r}
 
