@@ -1,21 +1,22 @@
 package main
 
 import (
+	"github.com/gouef/diago"
+	"github.com/gouef/diago/extensions"
 	"github.com/gouef/router"
 	"github.com/gouef/web-project/app"
 	"github.com/gouef/web-project/controllers"
 	"github.com/gouef/web-project/handlers"
-	"github.com/gouef/web-project/middleware"
 )
 
 func boot() *router.Router {
 	r := router.NewRouter()
 	n := r.GetNativeRouter()
-	d := middleware.NewDiago()
-	d.AddExtension(middleware.NewDiagoLatencyExtension())
-	d.AddExtension(middleware.NewDiagoRouteExtension(r))
+	d := diago.NewDiago()
+	d.AddExtension(extensions.NewDiagoLatencyExtension())
+	d.AddExtension(extensions.NewDiagoRouteExtension(r))
 
-	n.Use(middleware.DiagoMiddleware(r, d))
+	n.Use(diago.DiagoMiddleware(r, d))
 
 	templateHandler := &handlers.TemplateHandler{Router: r}
 
