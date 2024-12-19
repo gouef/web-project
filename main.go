@@ -5,15 +5,15 @@ import (
 	"github.com/gouef/diago/extensions"
 	"github.com/gouef/router"
 	extensions2 "github.com/gouef/router/extensions"
-	web_bootstrap "github.com/gouef/web-bootstrap"
+	//web_bootstrap "github.com/gouef/web-bootstrap"
 	"github.com/gouef/web-project/app"
 	"github.com/gouef/web-project/controllers"
 	"github.com/gouef/web-project/handlers"
 )
 
 func boot() *router.Router {
-	b := web_bootstrap.NewBootstrap()
-	b.Boot()
+	/*b := web_bootstrap.NewBootstrap()
+	b.Boot()*/
 
 	r := router.NewRouter()
 	n := r.GetNativeRouter()
