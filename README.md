@@ -7,7 +7,7 @@ web-project
 [![Go Report Card](https://goreportcard.com/badge/github.com/gouef/web-project)](https://goreportcard.com/report/github.com/gouef/web-project)
 [![codecov](https://codecov.io/github/gouef/web-project/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/gouef/web-project)
 
-## Vesions
+## Versions
 ![Stable Version](https://img.shields.io/github/v/release/gouef/web-project?label=Stable&labelColor=green)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/web-project?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/web-project?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
