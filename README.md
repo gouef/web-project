@@ -11,3 +11,12 @@ web-project
 ![Stable Version](https://img.shields.io/github/v/release/gouef/web-project?label=Stable&labelColor=green)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/web-project?label=RC&include_prereleases&filter=*rc*&logoSize=diago)
 ![GitHub Release](https://img.shields.io/github/v/release/gouef/web-project?label=Beta&include_prereleases&filter=*beta*&logoSize=diago)
+
+## Contributors
+
+<div>
+<span>
+  <a href="https://github.com/JanGalek"><img src="https://raw.githubusercontent.com/gouef/web-project/refs/heads/contributors-svg/.github/contributors/JanGalek.svg" alt="JanGalek" /></a>
+</span>
+</div>
+
