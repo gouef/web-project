@@ -1,12 +1,14 @@
 {{define "content"}}
-    <h1>Welcome</h1>
-    <p>Gouef works</p>
-    {{snippet "addAfterClick"}}
-    <p>Gouef works nice</p>
-    {{snippetEnd}}
+    <div class="container">
+        <h1>Welcome</h1>
+        <p>Gouef works</p>
+        {{snippet "addAfterClick"}}
+        <p>Gouef works nice</p>
+        {{snippetEnd}}
 
-    <h2>Counter</h2>
-    <div>
-        {{template "counter" .}}
+        <h2>Counter</h2>
+        <div>
+            {{template "counter" .}}
+        </div>
     </div>
 {{end}}

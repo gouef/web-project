@@ -46,5 +46,6 @@ func boot() *router.Router {
 
 func main() {
 	r := boot()
+
 	r.Run(":8080")
 }

@@ -1,3 +1,11 @@
+// Import vlastní SCSS (Bude zkompilováno na CSS)
+import './styles.scss'
+
+// Můžeš přidat JavaScript části Bootstrapu, pokud je potřebuješ
+import 'bootstrap'
+
+import * as bootstrap from 'bootstrap'
+
 function loadSnippet(snippetName) {
     fetch(`/snippet/${snippetName}`) // AJAX požadavek na server pro snippet
         .then(response => response.json()) // Očekáváme JSON odpověď
