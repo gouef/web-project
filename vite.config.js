@@ -15,11 +15,11 @@ export default defineConfig({
                     if (names.endsWith('.css')) {
                         return 'css/[name].css';
                     } else if (names.startsWith('images/')) {
-                        return 'assets/images/[name]'; // Obrázky z `src/images/` do `assets/images/`
+                        return 'assets/images/[name].[ext]'; // Obrázky z `src/images/` do `assets/images/`
                     } else if (/\.(jpe?g|png|gif|svg|webp|ttf|woff|woff2|eot|otf|mp4|webm)$/.test(names)) {
-                        return 'assets/[name]';
+                        return 'assets/images/[name].[ext]';
                     }
-                    return 'assets/[name]';
+                    return 'assets/[name].[ext]';
                 }
             }
         },

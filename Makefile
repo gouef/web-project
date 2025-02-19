@@ -1,7 +1,9 @@
-.PHONY: install tests build-js
+.PHONY: install tests build-js install-js
 
+install-js:
+	npm install
 build-js:
-	npm install && npm run build
+	npm run build
 
 install:
 	go mod tidy && go mod vendor

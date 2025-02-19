@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{.Title}}</title>
+    <script type="application/javascript" src="/static/js/main.js" rel="dns-prefetch"></script>
+    <link rel="stylesheet" href="/static/css/style.css" rel="dns-prefetch">
+    <script type="speculationrules">
+        {
+          "prerender": [
+            {
+              "where": {
+                "and": [
+                  { "href_matches": "/*" },
+                  { "not": { "href_matches": "/logout" } },
+                  { "not": { "href_matches": "/*\\?*(^|&)add-to-cart=*" } },
+                  { "not": { "selector_matches": ".no-prerender" } },
+                  { "not": { "selector_matches": "[rel~=nofollow]" } }
+                ]
+              }
+            }
+          ]
+        }
+    </script>
+</head>
+<body>
+{{template "navigation" . }}
+<div class="container-fluid py-2 bg-dark">
+    <h1>{{.H1}}</h1>
+    {{template "content" .}}
+</div>
+</body>
+</html>

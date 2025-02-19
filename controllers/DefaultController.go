@@ -15,8 +15,9 @@ func (controller DefaultController) Index(c *gin.Context) {
 		Users: []string{"Alice", "Bob", "Charlie"},
 	}
 
-	c.HTML(http.StatusOK, "layout.gohtml", gin.H{
+	c.HTML(http.StatusOK, "default.gohtml", gin.H{
 		"Title": "Gouef Project",
+		"H1":    "Homepage",
 		"Users": data,
 	})
 	//c.String(http.StatusOK, "OK")
@@ -24,5 +25,14 @@ func (controller DefaultController) Index(c *gin.Context) {
 }
 
 func (controller DefaultController) Ping(c *gin.Context) {
-	c.String(http.StatusOK, "OK")
+	data := struct {
+		Users []string
+	}{
+		Users: []string{"Ping", "Ping"},
+	}
+	c.HTML(http.StatusOK, "ping.gohtml", gin.H{
+		"Title": "Gouef Project",
+		"H1":    "Ping",
+		"Users": data,
+	})
 }

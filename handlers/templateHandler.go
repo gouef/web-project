@@ -16,7 +16,11 @@ type UrlForFunc func(name string, params ...interface{}) string
 // Vytvoření a inicializace šablon
 func (t *TemplateHandler) Initialize() {
 	n := t.Router.GetNativeRouter()
-	n.SetFuncMap(template.FuncMap{
+	n.SetFuncMap(t.GetFuncMap())
+}
+
+func (t *TemplateHandler) GetFuncMap() template.FuncMap {
+	return template.FuncMap{
 		"snippet":    snippetStart,
 		"snippetEnd": snippetEnd,
 		"endSnippet": snippetEnd,
@@ -38,5 +42,5 @@ func (t *TemplateHandler) Initialize() {
 			}
 			return url
 		}),
-	})
+	}
 }
