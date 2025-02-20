@@ -1,14 +1,13 @@
-{{define "navigation"}}
+{{define "navigation_backup"}}
 <header class="container-fluid max-vh-100 px-0">
-    <div class="container-fluid w-100 h-100 position-absolute overflow-hidden bg-blur-container p-0">
-        <div class="position-absolute top-0 start-0 w-100 h-100 bg-blur"></div>
-    </div>
-    <div class="container position-relative text-center p-0">
-        <div class="header-image ">
+    <div class="container-fluid position-relative text-center p-0">
+        <div class="container-fluid w-100 h-100 position-absolute overflow-hidden bg-blur-container p-0">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-blur"></div>
+        </div>
+        <div class="header-image container">
             <img src="/static/assets/images/gouef_wallpaper.webp" class="img-fluid shadow-lg" alt="Hlavní obrázek">
         </div>
-    </div>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75 container-fluid" style="bottom: 14px;">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75 container-fluid" style="bottom: 0px;">
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="/static/assets/images/gouef_logo.png" alt="Gouef" width="40" height="40">
@@ -46,5 +45,6 @@
                 </div>
             </div>
         </nav>
+    </div>
 </header>
 {{end}}

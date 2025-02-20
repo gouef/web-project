@@ -18,8 +18,8 @@
 
 .header-image {
   width: 100%;
-  max-width: 100vw;
-  height: 300px;
+  /*max-width: 100vw;*/
+  height: 330px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center -160px;
+    object-position: center -195px;
   }
 }
 
@@ -45,4 +45,8 @@ header {
 
 .max-vh-100 {
   max-width: 100vw;
+}
+
+.left-0 {
+  left: 0;
 }
