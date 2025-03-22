@@ -5,6 +5,8 @@
 /vendor
 /node_modules
 /package-lock.json
+/static/js/*
+/static/css/*
 # Binaries for programs and plugins
 *.exe
 *.exe~

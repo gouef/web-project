@@ -4,6 +4,7 @@ import (
 	"github.com/gin-contrib/multitemplate"
 	"github.com/gouef/diago"
 	"github.com/gouef/diago/extensions"
+	"github.com/gouef/finder"
 	"github.com/gouef/router"
 	extensions2 "github.com/gouef/router/extensions"
 	"path/filepath"
@@ -64,33 +65,28 @@ func loadTemplates(templatesDir string, templateHandler *handlers.TemplateHandle
 
 	funcMap := templateHandler.GetFuncMap()
 
-	layouts, err := filepath.Glob(templatesDir + "/layouts/*.gohtml")
-	if err != nil {
-		panic(err.Error())
-	}
-	rootLayouts, err := filepath.Glob(templatesDir + "/layout.gohtml")
-	if err != nil {
-		panic(err.Error())
-	}
-	layouts = append(layouts, rootLayouts...)
+	find := finder.FindFiles("*.gohtml").In(templatesDir)
 
-	includes, err := filepath.Glob(templatesDir + "/includes/*.gohtml")
-	if err != nil {
-		panic(err.Error())
+	layouts := map[string]finder.Info{}
+	var layoutsList []string
+	includes := map[string]finder.Info{}
+	var includesList []string
+
+	layouts = find.Match("layout.gohtml", "base.gohtml")
+	includes = find.Exclude("layout.gohtml", "@layout.gohtml", "base.gohtml").Get()
+
+	for p, _ := range layouts {
+		layoutsList = append(layoutsList, p)
+	}
+	for p, _ := range includes {
+		includesList = append(includesList, p)
 	}
 
-	//	includesNamed, err := filepath.Glob(templatesDir + "/**/*.gohtml")
-	/*
-		if err != nil {
-			panic(err.Error())
-		}
-		includes = append(includes, includesNamed...)
-	*/
 	// Generate our templates map from our layouts/ and includes/ directories
-	for _, include := range includes {
-		layoutCopy := make([]string, len(layouts))
-		copy(layoutCopy, layouts)
-		files := append(layoutCopy, includes...)
+	for _, include := range includesList {
+		layoutCopy := make([]string, len(layoutsList))
+		copy(layoutCopy, layoutsList)
+		files := append(layoutCopy, includesList...)
 		r.AddFromFilesFuncs(filepath.Base(include), funcMap, files...)
 	}
 	return r
