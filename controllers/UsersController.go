@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/gouef/renderer"
 	"github.com/gouef/web-project/models"
 	"net/http"
 	"strconv"
@@ -17,8 +16,7 @@ func (u UserController) Homepage(c *gin.Context) {
 }
 
 func (u UserController) GetAllUsers(w http.ResponseWriter, r *http.Request) {
-	users := models.GetAllUsers()
-	renderer.RenderTemplate(w, "users", users)
+	//users := models.GetAllUsers()
 }
 
 func GetUser(w http.ResponseWriter, r *http.Request) {
@@ -32,5 +30,5 @@ func GetUser(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "User not found", http.StatusNotFound)
 		return
 	}
-	renderer.RenderTemplate(w, "user", user)
+	//renderer.RenderTemplate(w, "user", user)
 }

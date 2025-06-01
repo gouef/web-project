@@ -1,4 +1,4 @@
-package controllers
+package controllers_module
 
 import (
 	"github.com/gin-gonic/gin"
@@ -20,9 +20,9 @@ func (controller DefaultController) Index(c *gin.Context) {
 		"H1":    "Homepage",
 		"Users": data,
 	})
-	//renderer.Render()
 	//c.String(http.StatusOK, "OK")
 	//renderer.RenderTemplate(c.Writer, "default", nil)
+	//renderer.Render()
 }
 
 func (controller DefaultController) Ping(c *gin.Context) {
@@ -36,5 +36,4 @@ func (controller DefaultController) Ping(c *gin.Context) {
 		"H1":    "Ping",
 		"Users": data,
 	})
-	//renderer.Render()
 }

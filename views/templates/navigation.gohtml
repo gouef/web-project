@@ -1,0 +1,52 @@
+{{define "navigation"}}
+<header class="container-fluid max-vh-100 px-0">
+    <div class="container-fluid position-relative text-center p-0">
+        <div class="container-fluid w-100 h-100 position-absolute overflow-hidden bg-blur-container p-0">
+            <div class="position-absolute top-0 start-0 w-100 h-100 bg-blur"></div>
+        </div>
+        <div class="container">
+            <div class="header-image container-fluid">
+                <img src="/static/assets/images/gouef_wallpaper.webp" class="img-fluid shadow-lg" alt="Hlavní obrázek">
+            </div>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75 position-absolute container-fluid bottom-0 left-0" style="bottom: 0px;">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img src="/static/assets/images/gouef_logo.png" alt="Gouef" width="40" height="40">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="{{link "home"}}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{link "ping"}}">Ping</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Dropdown
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-secondary" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+{{end}}
