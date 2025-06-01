@@ -6,7 +6,7 @@ require (
 	github.com/gin-contrib/multitemplate v1.1.1
 	github.com/gin-gonic/gin v1.10.1
 	github.com/gouef/finder v1.3.1
-	github.com/gouef/router v1.2.8
+	github.com/gouef/router v1.2.9
 	github.com/gouef/utils v1.9.4
 	github.com/gouef/web-bootstrap v0.3.3
 )
