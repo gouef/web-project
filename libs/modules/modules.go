@@ -13,7 +13,6 @@ import (
 var ModuleName string
 var Controllers = map[string]Controller{}
 
-var pcs = map[uintptr]string{}
 var (
 	namespaceCache   = make(map[uintptr]string)
 	pathFileCache    = make(map[uintptr]string)

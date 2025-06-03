@@ -7,6 +7,10 @@
 /package-lock.json
 /static/js/*
 /static/css/*
+/profile*.*
+/*.pprof
+/*.callgrind
+/web
 # Binaries for programs and plugins
 *.exe
 *.exe~

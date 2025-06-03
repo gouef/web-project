@@ -8,7 +8,7 @@ require (
 	github.com/gouef/finder v1.3.1
 	github.com/gouef/router v1.2.9
 	github.com/gouef/utils v1.9.4
-	github.com/gouef/web-bootstrap v0.3.3
+	github.com/gouef/web-bootstrap v0.4.0
 )
 
 replace (
@@ -20,6 +20,7 @@ replace (
 )
 
 require (
+	dario.cat/mergo v1.0.2 // indirect
 	github.com/bytedance/sonic v1.13.2 // indirect
 	github.com/bytedance/sonic/loader v0.2.4 // indirect
 	github.com/cloudwego/base64x v0.1.5 // indirect
@@ -31,7 +32,7 @@ require (
 	github.com/goccy/go-json v0.10.5 // indirect
 	github.com/gouef/diago v1.2.4 // indirect
 	github.com/gouef/mode v1.0.7 // indirect
-	github.com/gouef/renderer v1.0.1 // indirect
+	github.com/gouef/renderer v1.1.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/cpuid/v2 v2.2.10 // indirect
 	github.com/leodido/go-urn v1.4.0 // indirect

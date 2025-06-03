@@ -5,10 +5,13 @@ import (
 	bootstrap "github.com/gouef/web-bootstrap"
 	"github.com/gouef/web-project/app"
 	"github.com/gouef/web-project/controllers"
+	"net/http"
+	_ "net/http/pprof"
 )
 
 func boot() *router.Router {
 	b := bootstrap.NewBootstrap()
+	b.AddConfig("./config/config.yml")
 	b.Boot()
 
 	r := b.GetRouter()
@@ -24,6 +27,10 @@ func boot() *router.Router {
 }
 
 func main() {
+	go func() {
+		http.ListenAndServe("localhost:6060", nil)
+	}()
+
 	r := boot()
 
 	r.Run(":8081")
